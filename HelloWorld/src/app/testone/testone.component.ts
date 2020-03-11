@@ -44,6 +44,7 @@ export class TestoneComponent implements OnInit {
   public siteUrl=window.location.href;
   public myId="testId";
   public isDisabled=false;
+  public error=true;
   public successClass="text-success"
   public hasError=false;
   public isSpecial=true;  
