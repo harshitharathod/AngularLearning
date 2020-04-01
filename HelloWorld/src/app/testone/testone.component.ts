@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: '[app-testone]',
+  selector: 'app-testone',
   template: `
   <h2>
     Welcome {{name}}
@@ -24,6 +24,8 @@ import { Component, OnInit } from '@angular/core';
   {{greeting}}
   <input #myInput type="text">
   <button (click)="logMessage(myInput.value)">Log</button>
+  <input [(ngModel)]="names" type="text">
+  {{names}}
 
   `,
   styles: [`
@@ -44,12 +46,12 @@ export class TestoneComponent implements OnInit {
   public siteUrl=window.location.href;
   public myId="testId";
   public isDisabled=false;
-  public error=true;
   public successClass="text-success"
   public hasError=false;
   public isSpecial=true;  
   public highlightColor ="orange";
   public greeting=" ";
+  public names=" ";
   constructor() { }
   greetUser(){
     return "Hello" +this.name;
